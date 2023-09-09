@@ -28,8 +28,6 @@ def nuevo_libro():
         libros.append(libro)
         print(f"Libro registrado con éxito. Código: {codigo}")
 
-# Resto de las funciones sin cambios.
-
 def generar_codigo():
     codigo = generar()
     return codigo
