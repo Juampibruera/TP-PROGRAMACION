@@ -1,5 +1,7 @@
+# Trabajo Práctico I - Programación II
 import os
-import biblioteca
+import biblioteca 
+
 
 print("Bienvenido!")
 respuesta = ''
@@ -14,20 +16,20 @@ def menu():
 
 while respuesta != "salir":
     menu()
-    opt = input("\n Ingrese la opción de menú: ")
+    opt = input("\nIngrese la opción de menú: ")
     os.system("cls")  # Limpiar pantalla
     if opt.isnumeric():
-        if opt == "1":
-            biblioteca.ejemplares_prestados()
-        elif opt == "2":
+        if int(opt) == 1:
+            biblioteca.prestar_ejemplar_libro()  # Cambiado para que coincida con la función en el módulo biblioteca
+        elif int(opt) == 2:
             biblioteca.devolver_ejemplar_libro()
-        elif opt == "3":
+        elif int(opt) == 3:
             biblioteca.registrar_nuevo_libro()
-        elif opt == "4":
+        elif int(opt) == 4:
             biblioteca.eliminar_ejemplar_libro()
-        elif opt == "5":
-            biblioteca.mostrar_ejemplares_prestados()  # Supongo que esta función existe en tu módulo biblioteca
-        elif opt == "6":
+        elif int(opt) == 5:
+            biblioteca.ejemplares_prestados()
+        elif int(opt) == 6:
             respuesta = "salir"
         else:
             print("Ingrese una opción válida")
@@ -36,4 +38,4 @@ while respuesta != "salir":
 
     input("Presione cualquier tecla para continuar....")  # Pausa
 
-print("Hasta luego!.")
+print("¡Hasta luego!")
